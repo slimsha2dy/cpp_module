@@ -6,7 +6,7 @@
 /*   By: slimsha2dy <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 15:21:52 by slimsha2          #+#    #+#             */
-/*   Updated: 2023/02/04 16:12:15 by slimsha2         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:17:19 by monkeyki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define CONTACT_HPP
 
 #include <iostream>
-#include <string.h>
+#include <string>
 #include <iomanip>
 
 class Contact
