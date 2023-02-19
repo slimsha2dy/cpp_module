@@ -6,7 +6,7 @@
 /*   By: slimsha2dy <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:39:49 by slimsha2          #+#    #+#             */
-/*   Updated: 2023/02/19 18:29:40 by monkeyki         ###   ########.fr       */
+/*   Updated: 2023/02/19 18:38:21 by monkeyki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,44 +27,44 @@ void	PhoneBook::add(int i)
 	std::string	line;
 
 	std::cout << "first name: ";
-	while (!std::getline(std::cin, line)) {
-		if (!line.empty()) {
+	while (std::getline(std::cin, line)) {
+		if (line != "") {
 			this->contacts[i].setFirstName(line);
 			break ;
 		}
-		std::cout << "please enter a non-empty input\n";
+		std::cout << "please enter a non-empty input: ";
 	}
 	std::cout << "last name: ";
-	while (!std::getline(std::cin, line)) {
+	while (std::getline(std::cin, line)) {
 		if (!line.empty()) {
 			this->contacts[i].setLastName(line);
 			break ;
 		}
-		std::cout << "please enter a non-empty input\n";
+		std::cout << "please enter a non-empty input: ";
 	}
 	std::cout << "nickname: ";
-	while (!std::getline(std::cin, line)) {
+	while (std::getline(std::cin, line)) {
 		if (!line.empty()) {
 			this->contacts[i].setNickName(line);
 			break ;
 		}
-		std::cout << "please enter a non-empty input\n";
+		std::cout << "please enter a non-empty input: ";
 	}
 	std::cout << "phone number: ";
-	while (!std::getline(std::cin, line)) {
+	while (std::getline(std::cin, line)) {
 		if (!line.empty()) {
 			this->contacts[i].setPhoneNumber(line);
 			break ;
 		}
-		std::cout << "please enter a non-empty input\n";
+		std::cout << "please enter a non-empty input: ";
 	}
 	std::cout << "darkest secret: ";
-	while (!std::getline(std::cin, line)) {
+	while (std::getline(std::cin, line)) {
 		if (!line.empty()) {
 			this->contacts[i].setSecret(line);
 			break ;
 		}
-		std::cout << "please enter a non-empty input\n";
+		std::cout << "please enter a non-empty input: ";
 	}
 	if (this->size < 8)
 		this->size++;
