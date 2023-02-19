@@ -6,7 +6,7 @@
 /*   By: monkeyking <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 18:14:17 by monkeyki          #+#    #+#             */
-/*   Updated: 2023/02/13 18:31:38 by monkeyki         ###   ########.fr       */
+/*   Updated: 2023/02/19 11:26:19 by monkeyki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	main(void)
 		{
 			PhoneBook.showPhonebook();
 		}
+		if (index == 8)
+			index = 0;
 		std::cout <<"Enter Command: ";
 		std::getline(std::cin, cmd);
 	}

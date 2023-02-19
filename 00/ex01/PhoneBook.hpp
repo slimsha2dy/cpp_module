@@ -6,7 +6,7 @@
 /*   By: slimsha2dy <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:25:02 by slimsha2          #+#    #+#             */
-/*   Updated: 2023/02/13 18:26:11 by monkeyki         ###   ########.fr       */
+/*   Updated: 2023/02/19 12:01:53 by monkeyki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class PhoneBook
 		void	strForm(std::string s);
 		void	showContact(int i);
 		void	showPhonebook(void);
+		void	showInfor(int i);
 };
 
 #endif
