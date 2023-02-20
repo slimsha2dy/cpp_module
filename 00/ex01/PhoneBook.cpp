@@ -6,7 +6,7 @@
 /*   By: slimsha2dy <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 16:39:49 by slimsha2          #+#    #+#             */
-/*   Updated: 2023/02/19 18:38:21 by monkeyki         ###   ########.fr       */
+/*   Updated: 2023/02/20 17:16:40 by monkeyki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,10 +113,15 @@ void	PhoneBook::showInfor(int i)
 {
 	Contact temp;
 
-	temp = this->contacts[i];
+	temp = this->contacts[i - 1];
 	std::cout << "first name: " << temp.getFirstName() << '\n';
 	std::cout << "last name: " << temp.getLastName() << '\n';
 	std::cout << "nickname: " << temp.getNickName() << '\n';
 	std::cout << "phone number: " << temp.getPhoneNumber() << '\n';
 	std::cout << "darkest secret: " << temp.getSecret() << '\n';
+}
+
+int		PhoneBook::getSize(void) const
+{
+	return (this->size);
 }

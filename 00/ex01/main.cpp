@@ -6,7 +6,7 @@
 /*   By: monkeyking <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 18:14:17 by monkeyki          #+#    #+#             */
-/*   Updated: 2023/02/19 11:26:19 by monkeyki         ###   ########.fr       */
+/*   Updated: 2023/02/20 18:16:01 by monkeyki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(void)
 	PhoneBook	PhoneBook;
 	std::string	cmd;
 	int	index;
+	int	input;
 
 	std::cout << "Enter Command: ";
 	std::getline(std::cin, cmd);
@@ -28,6 +29,19 @@ int	main(void)
 		else if (cmd == "SEARCH")
 		{
 			PhoneBook.showPhonebook();
+			std::cout << "Enter Index: ";
+			if (std::cin >> input) {
+				if (input < 1 || input > PhoneBook.getSize())
+					std::cout << "Error: Index is out of range\n";
+				else
+					PhoneBook.showInfor(input);
+			}
+			else {
+				std::cin.clear(); // error 상태를 해제
+				std::cin.ignore(); // 입력 버퍼 비우기
+				std::cout << "Error: Invalid input\n";
+			}
+			std::cin.ignore();
 		}
 		if (index == 8)
 			index = 0;

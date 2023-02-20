@@ -6,7 +6,7 @@
 /*   By: slimsha2dy <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 14:39:35 by slimsha2          #+#    #+#             */
-/*   Updated: 2023/02/04 14:51:22 by slimsha2         ###   ########.fr       */
+/*   Updated: 2023/02/20 18:17:08 by monkeyki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int ac, char **av)
 		{
 			for (int j = 0; av[i][j]; j++)
 			{
-				std::cout << (char)std::toupper(av[i][j]);
+				std::cout << static_cast<char>(std::toupper(av[i][j]));
 			}
 		}
 	}
