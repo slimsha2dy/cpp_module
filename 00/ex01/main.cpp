@@ -6,7 +6,7 @@
 /*   By: monkeyking <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 18:14:17 by monkeyki          #+#    #+#             */
-/*   Updated: 2023/02/20 18:16:01 by monkeyki         ###   ########.fr       */
+/*   Updated: 2023/02/21 15:51:46 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	main(void)
 		}
 		if (index == 8)
 			index = 0;
+		if (std::cin.eof())
+			break ;
 		std::cout <<"Enter Command: ";
 		std::getline(std::cin, cmd);
 	}
