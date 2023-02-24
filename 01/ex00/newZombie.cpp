@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 15:16:04 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/02/22 15:42:06 by hwichoi          ###   ########.fr       */
+/*   Updated: 2023/02/25 05:16:33 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 Zombie*	newZombie(std::string name)
 {
-	Zombie* newZombie = new Zombie;
+	Zombie* newZombie = new Zombie(name);
 
-	newZombie->setName(name);
 	return (newZombie);
 }

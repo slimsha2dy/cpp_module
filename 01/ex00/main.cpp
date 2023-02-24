@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 01:34:59 by choihwiyong       #+#    #+#             */
-/*   Updated: 2023/02/25 04:24:14 by choihwiy         ###   ########.fr       */
+/*   Updated: 2023/02/25 05:17:37 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	randomChump(std::string name);
 
 int main(void)
 {
-    Zombie	aZombie;
+    Zombie	aZombie("foo");
     Zombie  *nZombie;
 
-    aZombie.setName("foo");
     aZombie.announce();
 
     nZombie = newZombie("faa");
