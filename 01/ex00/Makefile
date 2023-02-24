@@ -6,15 +6,15 @@
 #    By: choihwiyong <marvin@42.fr>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/24 19:02:39 by choihwiy          #+#    #+#              #
-#    Updated: 2023/02/24 19:03:03 by choihwiy         ###   ########.fr        #
+#    Updated: 2023/02/25 04:09:45 by choihwiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Variable
 NAME		= BraiiiiiiinnnzzzZ
-CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
-DEL			= rm -rf
+CC			= c++
+CFLAGS		= -Wall -Wextra -Werror -std=c++98
+RM			= rm -rf
 
 # srcs
 SRCS = newZombie.cpp \
@@ -27,12 +27,12 @@ OBJS = $(SRCS:.cpp=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 clean : 
-	$(DEL) $(OBJS)
+	$(RM) $(OBJS)
 
 fclean : clean
-	$(DEL) $(NAME)
+	$(RM) $(NAME)
 
 re : fclean all
 
