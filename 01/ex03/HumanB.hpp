@@ -6,7 +6,7 @@
 /*   By: choihwiyong <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 17:56:27 by choihwiy          #+#    #+#             */
-/*   Updated: 2023/02/26 18:19:57 by choihwiy         ###   ########.fr       */
+/*   Updated: 2023/02/26 20:49:58 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class HumanB
 		~HumanB(void);
 
 		void	attack(void);
-		void	setWeapon(Weapon weapon);
+		void	setWeapon(Weapon& weapon);
 };
 
 #endif
