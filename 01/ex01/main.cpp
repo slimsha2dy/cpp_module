@@ -3,25 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: choihwiyong <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 01:34:59 by choihwiyong       #+#    #+#             */
-/*   Updated: 2023/02/25 20:59:18 by choihwiy         ###   ########.fr       */
+/*   Created: 2023/02/25 20:48:41 by choihwiy          #+#    #+#             */
+/*   Updated: 2023/02/25 20:51:34 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main(void)
+int	main(void)
 {
-    Zombie	aZombie("foo");
-    Zombie  *nZombie;
+	Zombie*	Horde;
 
-    aZombie.announce();
-
-    nZombie = newZombie("faa");
-	nZombie->announce();
-
-	randomChump("town");
-	delete nZombie;
+	Horde = ZombieHorde(5, "zombie");
+	for (int i = 0; i < 5; i++) {
+		Horde[i].announce();
+	}
+	delete[] Horde;
 }

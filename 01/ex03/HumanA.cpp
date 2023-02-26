@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: choihwiyong <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 01:34:59 by choihwiyong       #+#    #+#             */
-/*   Updated: 2023/02/25 20:59:18 by choihwiy         ###   ########.fr       */
+/*   Created: 2023/02/26 13:47:02 by choihwiy          #+#    #+#             */
+/*   Updated: 2023/02/26 14:51:10 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-int main(void)
+HumanA::HumanA(std::string name, Weapon weapon)
 {
-    Zombie	aZombie("foo");
-    Zombie  *nZombie;
+	this->name = name;
+	this->weapon = weapon;
+}
 
-    aZombie.announce();
+HumanA::~HumanA()
+{
 
-    nZombie = newZombie("faa");
-	nZombie->announce();
+}
 
-	randomChump("town");
-	delete nZombie;
+void	HumanA::attack(void)
+{
+	std::cout << this->name << " attacks with their " << this->Weapon << std::endl;
 }

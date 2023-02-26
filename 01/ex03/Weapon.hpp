@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hwichoi <hwichoi@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: choihwiyong <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 20:52:19 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/02/25 20:59:11 by choihwiy         ###   ########.fr       */
+/*   Created: 2023/02/26 12:04:45 by choihwiy          #+#    #+#             */
+/*   Updated: 2023/02/26 12:16:21 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
 #include <string>
 #include <iostream>
 
-class Zombie
+class Weapon
 {
 	private:
-		std::string	name;
+		std::string	type;
 
 	public:
-		Zombie();
-		Zombie(std::string name);
-		~Zombie();
+		Weapon();
+		~Weapon();
+		Weapon(std::string type);
 
-		void	announce(void);
-		void	setName(std::string name);
+		void		setType(std::string type);
+		std::string	getType(void);
 };
-
-Zombie*	newZombie(std::string name);
-void	randomChump(std::string name);
 
 #endif
