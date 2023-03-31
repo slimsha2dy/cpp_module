@@ -6,20 +6,18 @@
 #    By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/24 19:02:39 by choihwiy          #+#    #+#              #
-#    Updated: 2023/03/31 20:15:47 by hwichoi          ###   ########.fr        #
+#    Updated: 2023/03/31 20:15:52 by hwichoi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Variable
-NAME		= ZombieHorde
+NAME		= HiThisIsBrain
 CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
 
 # srcs
-SRCS = ZombieHorde.cpp \
-	   main.cpp \
-	   Zombie.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # rules
