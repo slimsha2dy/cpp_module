@@ -6,17 +6,56 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 20:33:05 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/03/31 20:36:29 by hwichoi          ###   ########.fr       */
+/*   Updated: 2023/03/31 23:10:21 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "sifl.hpp"
+#include <string>
+#include <iostream>
+#include <fstream>
+
+void    find_mod(std::ofstream &ofile, std::string str[], std::string line);
 
 int main(int ac, char **av)
 {
+    std::ifstream   ifile;
+    std::ofstream   ofile;
+    std::string     str[3];
+    std::string     line;
+
     if (ac != 4)
     {
         std::cout << "Invalid parameters" << std::endl;
         return (0);
     }
+    str[0] = static_cast<std::string>(av[1]);
+    str[1] = static_cast<std::string>(av[2]);
+    str[2] = static_cast<std::string>(av[3]);
+    ifile.open(str[0], std::ios::in);   // std::ios::in = Read mode
+    if (ifile.fail())
+    {
+        std::cout << "Failed to open file" << std::endl;
+        return (0);
+    }
+    ofile.open(str[0].append(".replace"), std::ios::out);
+    while (getline(ifile, line))
+    {
+        find_mod(ofile, str, line);
+        ofile << line << std::endl;
+    }
+
+    ifile.close();
+    ofile.close();
+    return (0);
+}
+
+void    find_mod(std::ofstream &ofile, std::string str[], std::string line)
+{
+    std::string s1 = str[1];
+    std::string s2 = str[2];
+    std::string::size_type  mod_i;
+
+    mod_i = line.find(s1);
+    if (mod_i == std::string::npos)
+        return ;
 }
