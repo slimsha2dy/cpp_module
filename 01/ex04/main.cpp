@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 20:33:05 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/03/31 23:10:21 by hwichoi          ###   ########.fr       */
+/*   Updated: 2023/04/01 15:35:58 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int main(int ac, char **av)
     while (getline(ifile, line))
     {
         find_mod(ofile, str, line);
-        ofile << line << std::endl;
     }
 
     ifile.close();
@@ -56,6 +55,11 @@ void    find_mod(std::ofstream &ofile, std::string str[], std::string line)
     std::string::size_type  mod_i;
 
     mod_i = line.find(s1);
-    if (mod_i == std::string::npos)
-        return ;
+    while (mod_i != std::string::npos)	// there is no s1 in line
+	{
+		ofile << line.substr(0, mod_i) << s2;
+		line = line.substr(mod_i + s1.length());
+		mod_i = line.find(s1);
+	}
+	ofile << line << std::endl;
 }
