@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 20:33:05 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/04/01 15:35:58 by choihwiy         ###   ########.fr       */
+/*   Updated: 2023/04/03 11:09:38 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(int ac, char **av)
         std::cout << "Failed to open file" << std::endl;
         return (0);
     }
-    ofile.open(str[0].append(".replace"), std::ios::out);
+    ofile.open(str[0].append(".replace"), std::ios::out);	// std::ios::out = Write mode
     while (getline(ifile, line))
     {
         find_mod(ofile, str, line);
