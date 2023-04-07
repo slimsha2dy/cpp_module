@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 13:55:04 by choihwiy          #+#    #+#             */
-/*   Updated: 2023/04/07 19:12:39 by hwichoi          ###   ########.fr       */
+/*   Created: 2023/04/07 13:54:48 by choihwiy          #+#    #+#             */
+/*   Updated: 2023/04/07 20:05:44 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-int main( void ) {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+#include <string>
+#include <iostream>
 
-	a = c;
+class	Fixed
+{
+	private:
+		int	fixed_point;
+		static const int	fract_bits = 8;
 
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
+	public:
+		Fixed();
+		Fixed(const int i);
+		Fixed(const float f);
+		~Fixed();
+		Fixed(const Fixed& other);
+		Fixed& operator=(const Fixed& other);
+		int	getRawBits(void) const;
+		void	setRawBits(int const raw);
+};
 
-	return 0;
-}
+#endif
