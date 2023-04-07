@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 20:33:05 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/04/03 11:09:38 by choihwiy         ###   ########.fr       */
+/*   Updated: 2023/04/07 17:59:18 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include <fstream>
 
-void    find_mod(std::ofstream &ofile, std::string str[], std::string line);
+void    find_mod(std::ifstream &ifile, std::ofstream &ofile, std::string str[], std::string line);
 
 int main(int ac, char **av)
 {
@@ -40,7 +40,7 @@ int main(int ac, char **av)
     ofile.open(str[0].append(".replace"), std::ios::out);	// std::ios::out = Write mode
     while (getline(ifile, line))
     {
-        find_mod(ofile, str, line);
+        find_mod(ifile, ofile, str, line);
     }
 
     ifile.close();
@@ -48,7 +48,7 @@ int main(int ac, char **av)
     return (0);
 }
 
-void    find_mod(std::ofstream &ofile, std::string str[], std::string line)
+void    find_mod(std::ifstream &ifile, std::ofstream &ofile, std::string str[], std::string line)
 {
     std::string s1 = str[1];
     std::string s2 = str[2];
@@ -61,5 +61,7 @@ void    find_mod(std::ofstream &ofile, std::string str[], std::string line)
 		line = line.substr(mod_i + s1.length());
 		mod_i = line.find(s1);
 	}
-	ofile << line << std::endl;
+    ofile << line;
+    if (!ifile.eof())
+	    ofile << std::endl;
 }

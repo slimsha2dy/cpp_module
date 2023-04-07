@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: choihwiyong <marvin@42.fr>                 +#+  +:+       +#+        */
+/*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 13:54:59 by choihwiy          #+#    #+#             */
-/*   Updated: 2023/04/07 14:19:51 by choihwiy         ###   ########.fr       */
+/*   Updated: 2023/04/07 17:33:52 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Fixed::~Fixed()
 Fixed::Fixed(const Fixed& other)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->fixed_point = other.getRawBits();
+	*this = other;
 }
 
 Fixed &Fixed::operator=(const Fixed& other)
