@@ -6,12 +6,12 @@
 #    By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/24 19:02:39 by choihwiy          #+#    #+#              #
-#    Updated: 2023/04/11 19:38:18 by hwichoi          ###   ########.fr        #
+#    Updated: 2023/04/14 17:31:27 by hwichoi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Variable
-NAME		= Fixed
+NAME		= BSP
 CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf

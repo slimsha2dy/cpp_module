@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:32:20 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/04/11 20:30:18 by hwichoi          ###   ########.fr       */
+/*   Updated: 2023/04/14 17:29:42 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int main(void)
 {
-    Point   a;
-    Point   b(-4.2, 5.80);
-    Point   c(4.2, 7.2);
+    Point   a(-4, -1);
+    Point   b(3.5, 5);
+    Point   c(2.5, -4.5);
     Point   p1(a);
-    Point   p2(-2.35, 3.25);
-    Point   p3(-4.4, 2.4);
-    Point   p4(-1.6, 6.25);
-    Point   p5(-1.4, 6.25);
-    Point   p6(0, 5.8);
-    Point   p7(0.6, 2.4);
+    Point   p2(0.5, 2.6);
+    Point   p3(-0.1, -3.1);
+    Point   p4(2.9, -0.7);
+    Point   p5(1, 0);
+    Point   p6(-0.4, -2.6);
+    Point   p7(3.4, 4.6);
     Point   p8(-0.2, 0.6);
     
     std::cout << "false case" << std::endl;
