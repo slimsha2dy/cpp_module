@@ -6,12 +6,12 @@
 #    By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/27 18:57:17 by hwichoi           #+#    #+#              #
-#    Updated: 2023/04/27 20:36:27 by hwichoi          ###   ########.fr        #
+#    Updated: 2023/04/27 20:36:21 by hwichoi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Variable
-NAME		= ScavTrap
+NAME		= FragTrap
 CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM			= rm -rf
@@ -19,7 +19,7 @@ RM			= rm -rf
 # srcs
 SRCS = main.cpp \
 	   ClapTrap.cpp \
-	   ScavTrap.cpp
+	   FragTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # rules
