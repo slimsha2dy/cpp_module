@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 16:03:04 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/04/27 17:23:42 by hwichoi          ###   ########.fr       */
+/*   Updated: 2023/04/27 17:45:00 by choihwiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ class   ClapTrap
         void    attack(const std::string& target);
         void    takeDamage(unsigned int amount);
         void    beRepaired(unsigned int amount);
+		std::string getName(void) const;
+		unsigned int getHit(void) const;
+		unsigned int getEnergy(void) const;
+		unsigned int getDamage(void) const;
 };
 
 #endif
