@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 20:24:34 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/04/29 21:35:45 by hwichoi          ###   ########.fr       */
+/*   Updated: 2023/04/30 17:39:17 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,14 @@ Brain& Brain::operator =(const Brain &other)
 
 std::string Brain::getIdea(int n) const
 {
+    if (n < 0 || n >= 100)
+        return ("");
     return (this->ideas[n]);
 }
 
 void   Brain::setIdea(std::string s, int n)
 {
-   this->ideas[n] = s; 
+    if (n < 0 || n >= 100)
+        return ;
+    this->ideas[n] = s; 
 } 

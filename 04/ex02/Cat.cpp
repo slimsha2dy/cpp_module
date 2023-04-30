@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 17:45:25 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/04/29 21:30:30 by hwichoi          ###   ########.fr       */
+/*   Updated: 2023/04/30 17:45:03 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat() : Animal("Cat")
 {
     std::cout << "Cat" << std::endl;
-    this->brain = new Brain;
+    this->brain = new Brain();
 }
 
 Cat::Cat(const Cat &other)
@@ -28,6 +28,7 @@ Cat::~Cat()
 {
     std::cout << "A cat is dead" << std::endl;
     delete this->brain;
+    this->brain = 0;
 }
 
 Cat& Cat::operator =(const Cat &other)
@@ -36,7 +37,7 @@ Cat& Cat::operator =(const Cat &other)
     if (this != &other)
     {
         this->type = other.type;
-        this->brain = new Brain(*(other.brain));
+        *(this->brain) = *(other.brain);
     }
     return (*this);
 }

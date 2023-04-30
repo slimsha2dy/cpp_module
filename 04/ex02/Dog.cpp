@@ -6,7 +6,7 @@
 /*   By: hwichoi <hwichoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 18:00:55 by hwichoi           #+#    #+#             */
-/*   Updated: 2023/04/29 21:29:41 by hwichoi          ###   ########.fr       */
+/*   Updated: 2023/04/30 17:45:12 by hwichoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Dog::Dog() : Animal("Dog")
 {
     std::cout << "Dog" << std::endl;
-    this->brain = new Brain;
+    this->brain = new Brain();
 }
 
 Dog::Dog(const Dog &other)
@@ -37,7 +37,7 @@ Dog& Dog::operator =(const Dog &other)
     if (this != &other)
     {
         this->type = other.type;
-        this->brain = new Brain(*(other.brain));
+        *(this->brain) = *(other.brain);
     }
     return (*this);
 }
